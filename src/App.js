@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import{Route, Switch, Link} from 'react-router-dom';
 
 import Home from './Home/Home';
+import About from './About/About';
 import Store from './Store/Store';
 import Product from './Product/Product';
 
@@ -18,12 +19,14 @@ class App extends Component {
         </div>
         <nav>
           <Link to="/"><p>Home</p></Link>
+          <Link to="/about"><p>About</p></Link>
           <Link to="/store"><p>Store</p></Link>
         </nav>
 
         
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
             <Route path="/store" component={Store} />
             <Route path="/product/:id" component={Product} />
           </Switch>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import * as products from '../services/products.js';
+import "./Product.css";
 
 class Product extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class Product extends Component {
         const {product} = this.state;
 
         return (
-            <div>
+            <div className="product_container">
                 <img src={product.image} />
 
                 <h1>{product.title}</h1>

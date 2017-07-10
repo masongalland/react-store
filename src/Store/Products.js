@@ -1,8 +1,8 @@
 import React from 'react';
 import{Link} from  'react-router-dom';
 
-export default function Shirts(props){
-    const hats = props.products.map((product, i) => {
+export default function Products(props){
+    const products  = props.products.map((product, i) => {
         return (
             <div key={i}>
                 <Link to={`/product/${product.id}`} >{product.title}</Link>
@@ -11,7 +11,8 @@ export default function Shirts(props){
     });
     return (
         <div>
-            {hats}
+            <h2>{props.title}</h2>
+            {products}
         </div>
     )
 }

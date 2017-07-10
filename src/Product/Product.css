@@ -1,0 +1,7 @@
+.product_container {
+    height: 600px;
+    padding: 50px;
+}
+.product_container img {
+    height: 80%;
+}

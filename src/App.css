@@ -17,6 +17,21 @@
 .App-intro {
   font-size: large;
 }
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 200px;
+  background-color: #60d8f9;
+}
+a {
+    color: #222222;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+  color: #3e96af;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

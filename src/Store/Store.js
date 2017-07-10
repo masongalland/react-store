@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {Link, Route} from 'react-router-dom';
 
-import Hats from './Hats';
-import Shirts from './Shirts';
+import Products from './Products';
 
 import * as products from '../services/products.js';
+import "./Store.css"
 
 
 class Store extends Component {
@@ -37,16 +37,16 @@ class Store extends Component {
         return (
             <div>
                 <h1>This is the Store Component</h1>
-                <div>
+                <div className="product_categories">
                     <Link to="/store/hats">Hats</Link>
                     <Link to="/store/shirts">Shirts</Link>
                 </div>
 
                 <Route path="/store/hats" render={() => (
-                    <Hats products={this.state.hats} />
+                    <Products title="Hats" products={this.state.hats} />
                 )} />
                 <Route path="/store/shirts" render={() => (
-                    <Shirts products={this.state.shirts} />
+                    <Products title="Shirts" products={this.state.shirts} />
                 )} />
 
             </div>
