@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import{Route, Switch, Link} from 'react-router-dom';
+
+import Home from './Home/Home';
+import Store from './Store/Store';
+import Product from './Product/Product';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -8,11 +14,22 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Welcome to My Store</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <nav>
+          <Link to="/"><p>Home</p></Link>
+          <Link to="/store"><p>Store</p></Link>
+        </nav>
+
+        
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/store" component={Store} />
+            <Route path="/product/:id" component={Product} />
+          </Switch>
+
+        
+        
       </div>
     );
   }
